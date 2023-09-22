@@ -5,10 +5,14 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import Slider from '../Components/Slider'
 import Categories from '../Components/Categories'
 import Products from '../Components/Products'
+import Bottom from '../Components/Bottom'
 const HomeScreen = () => {
   
   return (
-    <ScrollView className='flex-1 ' style={{paddingTop:hp(5),marginLeft:hp(2),marginRight:hp(1.2)}}>
+    <View className='flex-1'>
+      
+    <ScrollView  style={{paddingTop:hp(5),marginLeft:hp(2),marginRight:hp(1.2)}}>
+       
       <View className='flex-row items-center justify-between space-y-3 mb-5'>
         <View className='flex-row items-center'>
           <View className='rounded border-neutral-400 border'>
@@ -34,18 +38,27 @@ const HomeScreen = () => {
                     <Text className='text-white'>Shop Now</Text>
                   </View>
             </View>
-            <Image source={require('../assets/Green.png')} style={{justifyContent:'center',marginTop:hp(-8)}}/>
+            <Image source={require('../assets/Green.png')} style={{justifyContent:'center',marginTop:hp(-8),width:hp(30),}}/>
         </View>
       </View>
       {/* categories */}
       <View >
       <Categories/>
+      
       </View>
       {/* Products */}
+      
       <View>
+      
         <Products/>
       </View>
+      {/* Bottom */}
+      
+       
+    
     </ScrollView>
+    <Bottom/>
+    </View>
   )
 }
 
